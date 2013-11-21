@@ -25,7 +25,6 @@ setup(
 	entry_points=\
 	"""
         [ckan.plugins]
-	# Add plugins here, eg
-	# myplugin=ckanext.custom_theme:PluginClass
+        custom_theme=ckanext.custom_theme.plugin:CustomThemePlugin
 	""",
 )
