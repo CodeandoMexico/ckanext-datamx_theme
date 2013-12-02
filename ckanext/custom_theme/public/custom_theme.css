@@ -1,0 +1,56 @@
+body {
+  background-color: #3d3d3d;
+}
+
+.account-masthead {
+  background-color: rgb(40, 40, 40);
+}
+
+.hero {
+  background: url(/cmx-home.jpg);
+  padding: 60px 0;
+}
+
+/* ========================================================================
+   The main masthead bar that contains the site logo, nav links, and search
+   ======================================================================== */
+
+.masthead {
+  background-color: #3d3d3d;
+}
+
+.masthead .navigation .nav-pills li a:hover,
+.masthead .navigation .nav-pills li.active a {
+  background-color: #537C36;
+}
+
+/* Index search snippet */
+
+.module-search {
+  color: #ffffff;
+  text-align: center;
+}
+
+.search-input .search {
+  padding: 30px 100px 30px 20px;
+  width: 500px;
+  border: none;
+  box-shadow: 0px 0px 0px 7px rgba(0,0,0,0.3);
+  border-radius: 3px;
+  font-size: 1em;
+}
+
+.search-giant {
+  display: inline-block;
+}
+
+.heading {
+  margin: 10px 0px 20px 0px;
+  font-size: 1.8em;
+}
+
+/* Footer */
+
+.site-footer {
+  background-color: #3d3d3d;
+}
