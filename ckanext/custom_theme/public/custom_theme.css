@@ -31,7 +31,7 @@ body {
   text-align: center;
 }
 
-.search-input .search {
+.search-form .search-giant input {
   padding: 30px 100px 30px 20px;
   width: 500px;
   border: none;
@@ -47,6 +47,10 @@ body {
 .heading {
   margin: 10px 0px 20px 0px;
   font-size: 1.8em;
+}
+
+.search-form {
+  border: none;
 }
 
 /* Footer */
