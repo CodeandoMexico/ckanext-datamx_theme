@@ -54,3 +54,8 @@ body {
 .site-footer {
   background-color: #3d3d3d;
 }
+
+.omx-footer-logo {
+  display: block;
+  margin-top: 2px;
+}
