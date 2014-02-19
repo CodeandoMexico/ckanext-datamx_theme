@@ -26,27 +26,61 @@ body {
 
 /* Index search snippet */
 
-.module-search {
+.homepage {
+  background-color: #121E34;
   color: #ffffff;
+}
+
+.homepage .module-search {
   text-align: center;
+  padding: 0px;
+  background-color: #121E34;
 }
 
-.search-form .search-giant input {
-  padding: 30px 100px 30px 20px;
-  width: 500px;
+.highlighted {
+  color: #2F9DE6;
+  font-weight: bolder;
+}
+.homepage .search-form .search-input.search-giant input {
+  padding: 25px 100px 25px 20px;
+  width: 600px;
   border: none;
-  box-shadow: 0px 0px 0px 7px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.3);
   border-radius: 3px;
-  font-size: 1em;
+  font-size: 1.8em;
+  font-weight: 100;
+  line-height: 1.0em;
 }
 
-.search-giant {
+.homepage .search-giant {
   display: inline-block;
 }
+.homepage .module-search .module-content .heading {
+  margin: 10px 0px 10px 0px;
+  font-size: 2.1em;
+  font-weight: 100;
+  letter-spacing: 0.05em;
+}
 
-.heading {
-  margin: 10px 0px 20px 0px;
-  font-size: 1.8em;
+.homepage .module-search .module-content h5 {
+  margin: 0px 0px 40px 0px;
+  font-size: 1.25em;
+  font-weight: 100;
+  letter-spacing: 0.02em;
+  color: #BDBDBD;
+}
+
+.homepage .module-search .module-content {
+  background-color: #23324F;
+}
+
+.homepage .joined-orgs-msg {
+  padding: 50px 0px 50px 0px;
+  color: #70A6C6;
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
 }
 
 .search-form {
