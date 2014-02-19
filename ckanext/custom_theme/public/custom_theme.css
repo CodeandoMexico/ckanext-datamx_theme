@@ -87,6 +87,81 @@ body {
   border: none;
 }
 
+/* who uses it */
+.who-uses-it {
+  padding: 25px 0px 25px 0px;
+  text-align: center;
+  background-color: #EEEEEE;
+  color: #5B5B5B;
+}
+
+.who-uses-it h2 {
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+
+.who-uses-it p {
+  letter-spacing: 0.05em;
+  line-height: 1.3em;
+  font-weight: 200;
+  font-size: 1.5em;
+  color: #858585;
+  margin: 10px;
+}
+
+.user-description {
+  padding: 20px 50px 20px 50px;
+  margin: 5px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+a.button {
+  color: #ffffff;
+  padding: 10px 30px 10px 30px;
+  font-size: 1.5em;
+  border-radius: 5px;
+  box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.5);
+  letter-spacing: 0.05em;
+  display: inline-block;
+  margin: 20px 0px 20px 0px;
+}
+
+a.button:hover {
+  text-decoration: none;
+}
+
+.button-green {
+  background-color: #00CC79;
+}
+
+.button-yellow {
+  background-color: #ECBC2B;
+}
+
+.button-blue {
+  background-color: #24AEED;
+}
+
+.button-orange {
+  background-color: #F06226;
+}
+
+a.button-bordered:hover {
+  text-decoration: none;
+}
+
+a.button-bordered {
+  padding: 10px 30px 10px 30px;
+  border: 3px solid #A2A2A2;
+  border-radius: 3px;
+  color: #686868;
+  font-size: 1.3em;
+  display: inline-block;
+  margin: 30px;
+}
+
 /* Footer */
 
 .site-footer {
