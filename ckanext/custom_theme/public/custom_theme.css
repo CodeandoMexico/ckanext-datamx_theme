@@ -186,10 +186,38 @@ a.button-bordered {
 /* Footer */
 
 .site-footer {
-  background-color: #3d3d3d;
+  background: #EEEEEE;
+  color: #2C2C2C;
+  font-weight: 200;
+  font-size: 1.1em;
+  padding: 50px;
 }
 
-.omx-footer-logo {
-  display: block;
-  margin-top: 2px;
+.site-footer a {
+  color: #2C2C2C;
 }
+
+.site-footer h5 {
+  font-weight: 200;
+  color: #565656;
+}
+
+.site-footer .logo {
+  text-align: right;
+  vertical-align: top;
+}
+
+.site-footer label {
+  color: #2C2C2C;
+  font-weight: 200;
+  font-size: 1.1em;
+}
+.footer-links {
+  width: auto;
+}
+
+.footer-links .logo, .footer-links .all-links {
+  display: inline-block;
+  margin: 0px 50px 0px 50px;
+}
+
