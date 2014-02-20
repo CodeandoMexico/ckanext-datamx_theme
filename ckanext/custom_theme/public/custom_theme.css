@@ -162,6 +162,27 @@ a.button-bordered {
   margin: 30px;
 }
 
+.collaborators {
+  background-color: #FFFFFF;
+  padding: 25px 40px 25px 40px;
+  color: #858585;
+  text-align: center;
+}
+
+.collaborators h2 {
+  font-weight: 400;
+  text-align: left;
+}
+
+.collaborators div {
+  display: inline-block;
+  margin: 10px 60px 10px 60px;
+}
+
+.collaborators div img {
+  margin: 30px 10px 30px 10px;
+}
+
 /* Footer */
 
 .site-footer {
