@@ -116,7 +116,13 @@ body {
 }
 
 .homepage .module-search .module-content {
-  background-color: #23324F;
+  padding: 100px 0px 100px 0px;
+  height: 200px;
+  background: url(/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .homepage .joined-orgs-msg {
