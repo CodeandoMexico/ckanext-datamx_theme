@@ -1,0 +1,17 @@
+{% ckan_extends %}
+
+{% block header_site_navigation %}
+  <nav class="section navigation">
+    <ul class="nav nav-tabs">
+      {% block header_site_navigation_tabs %}
+        <li><a href="#">Datos</a></li>
+        <li><a href="#">APIs</a></li>
+        <li><a href="#">Apps</a></li>
+        <li><a href="#">Retos</a></li>
+      {% endblock %}
+    </ul>
+  </nav>
+{% endblock %}
+
+{% block header_site_search %}
+{% endblock %}
