@@ -117,7 +117,7 @@ body {
 
 .homepage .module-search .module-content {
   padding: 100px 0px 100px 0px;
-  height: 200px;
+  height: 250px;
   background: url(/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -141,6 +141,14 @@ body {
 
 .search-form {
   border: none;
+}
+
+.notice {
+  padding: 20px;
+}
+
+.homepage .module-search .module-content .notice h5 {
+  margin: 5px;
 }
 
 /* who uses it */
@@ -215,7 +223,7 @@ a.button-bordered {
   color: #686868;
   font-size: 1.3em;
   display: inline-block;
-  margin: 30px;
+  margin: 10px;
 }
 
 .collaborators {
