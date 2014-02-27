@@ -21,7 +21,7 @@ body {
 }
 
 .masthead .content {
-  position: relative;
+  position: static;
   display: inline-block;
 }
 
@@ -68,6 +68,101 @@ body {
   text-align: center;
   padding: 20px;
 }
+
+
+/* Dropdown nav */
+.masthead ul.dropdown {
+  font-size: 1.2em;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.masthead ul.push-from-left, .masthead .push-from-left {
+  margin-left: 140px;
+}
+
+ul.dropdown img.gravatar {
+  position: relative;
+  top: -3px;
+}
+
+ul.dropdown li {
+  display: block;
+  position: relative;
+  float: left;
+}
+
+ul.dropdown li ul {
+  display: none;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  z-index: 100;
+}
+
+ul.dropdown li a {
+  display: block;
+  text-decoration: none;
+  color: #FFFFFF;
+  margin-left: 1px;
+  white-space: nowrap;
+}
+
+ul.dropdown > li > a {
+  height: 40px;
+  position: relative;
+  top: -5px;
+}
+
+ul.dropdown li ul li a{
+  color: #23324F;
+  font-size: 1.3em;
+  font-weight: 200;
+}
+
+ul.dropdown li:hover ul {
+  display: block;
+  position: absolute;
+}
+
+ul.dropdown li:hover ul:before{
+  content: '';
+  display: inline-block;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #CCCCCC;
+  border-bottom-color: #FFFFFF;
+  position: absolute;
+  top: -8px;
+  left: 55px;
+}
+
+ul.dropdown li ul:first-child {
+  border-radius: 10px;
+}
+
+ul.dropdown li:hover li {
+  float: none;
+  font-size: 11px;
+}
+
+ul.dropdown li:hover li a {
+  background: #FFFFFF;
+  padding: 5px 30px 5px 30px;
+}
+
+ul.dropdown.nav.nav-tabs li:hover li a:hover {
+  background: #23324F;
+  color: #FFFFFF;
+  border: none;
+}
+
+/* /dropdown nav */
 
 /* Index search snippet */
 
