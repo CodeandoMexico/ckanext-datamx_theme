@@ -1,0 +1,51 @@
+{% extends 'organization/read_base.html' %}
+
+{% block primary_content %}
+  {% snippet 'snippets/organization.html', organization=c.group_dict, show_nums=true %}
+{% endblock %}
+
+{% block package_list %}
+  {% if c.page.items %}
+    <div class="sort-datasets">
+      <span>Ordenar por:</span>
+      {% if c.sort_by_selected != "score desc" %}
+        <a class="active" href="{{ url }}?sort=metadata_modified+desc">M&aacute;s Nuevo</a>
+        <span>/</span>
+        <a href="{{ url }}?sort=score+desc">M&aacute;s Popular</a>
+      {% else %}
+        <a href="{{ url }}?sort=metadata_modified+desc">M&aacute;s Nuevo</a>
+        <span>/</span>
+        <a class="active" href="{{ url }}?sort=score+desc">M&aacute;s Popular</a>
+      {% endif %}
+    </div>
+    {{ h.snippet('snippets/package_list.html', packages=c.page.items) }}
+  {% endif %}
+{% endblock %}
+
+{% block page_pagination %}
+  {{ c.page.pager(q=c.q) }}
+{% endblock %}
+
+{% block apps_list %}
+  <h3>Apps C&iacute;vicas</h3>
+  <p>Descubre qui&eacute;nes usan y c&oacute;mo se usan los datos abiertos<br />en M&eacute;xico para mejorar el pa&iacute;s.</p>
+  <div class="frame-white-round frame-app">
+    <h2>Mejora Tu Escuela</h2>
+    <p>Mejora Tu Escuela es una aplicación para conocer, comparar, calificar y mejorar las escuelas de M&eacute;xico.</p>
+    <p class="technologies">PHP, MySQL, CSS3, HTML5</p>
+    <a class="button button-green">Visitar</a>
+  </div>
+  <div class="frame-white-round frame-app">
+    <h2>Mejora Tu Escuela</h2>
+    <p>Mejora Tu Escuela es una aplicación para conocer, comparar, calificar y mejorar las escuelas de M&eacute;xico.</p>
+    <p class="technologies">PHP, MySQL, CSS3, HTML5</p>
+    <a class="button button-green">Visitar</a>
+  </div>
+  <div class="frame-white-round frame-app">
+    <h2>Mejora Tu Escuela</h2>
+    <p>Mejora Tu Escuela es una aplicación para conocer, comparar, calificar y mejorar las escuelas de M&eacute;xico.</p>
+    <p class="technologies">PHP, MySQL, CSS3, HTML5</p>
+    <a class="button button-green">Visitar</a>
+  </div>
+
+{% endblock %}

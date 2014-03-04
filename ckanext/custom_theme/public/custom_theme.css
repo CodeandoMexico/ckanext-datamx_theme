@@ -210,8 +210,9 @@ ul.dropdown.nav.nav-tabs li:hover li a:hover {
   color: #BDBDBD;
 }
 
-.homepage .module-search .module-content {
-  padding: 100px 0px 100px 0px;
+.homepage .module-search .module-content, .organization-page.module-content {
+  padding: 130px 0px;
+  margin: 0px;
   height: 250px;
   background: url(/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -268,7 +269,7 @@ ul.dropdown.nav.nav-tabs li:hover li a:hover {
   margin: 10px;
 }
 
-.user-description {
+div.frame-white-round {
   padding: 20px 50px 20px 50px;
   margin: 5px;
   background-color: #ffffff;
@@ -381,3 +382,188 @@ a.button-bordered {
   margin: 0px 50px 0px 50px;
 }
 
+/* Organization */
+
+.organization-page {
+  background-color: #EEEEEE;
+  padding: 20px 40px;
+  border-bottom: 1px solid #BEBEBE;
+}
+
+.image-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.heading {
+  color: #FFFFFF;
+  font-size: 50px;
+}
+
+.description {
+  color: #FFFFFF;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.organization {
+  text-align: center;
+}
+
+.organization div {
+  display: inline-block;
+  margin-right: 30px;
+  vertical-align: top;
+}
+
+.organization .stats {
+  display: block;
+  margin-top: 20px;
+}
+
+.organization .stats div {
+  color: #506897;
+  font-size: 24px;
+  font-weight: 300;
+  border: 4px solid #506897;
+  border-radius: 5px;
+  padding: 20px 30px;
+  min-width: 130px;
+}
+
+.organization .stats div h1 {
+  color: #FFFFFF;
+  font-size: 50px;
+  font-weight: 400;
+  margin: -10px;
+  text-align: center;
+}
+
+.organization-info h1 {
+  text-align: left;
+}
+
+.organization-info p {
+  text-align: left;
+  width: 600px;
+}
+
+.organization-info a {
+  display: block;
+  color: #62E7DE;
+}
+
+.package-list {
+  background: #EEEEEE;
+  width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dataset-list .dataset-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 280px;
+  height: 180px;
+  margin: 15px 20px 15px 20px;
+  background: #FFFFFF;
+  padding: 10px 15px 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #D5D5D5;
+  box-shadow: 0px 2px 0px #5CB3E7;
+  position: relative;
+}
+
+.dataset-item .dataset-content div {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-weight: 200;
+  font-size: 15px;
+  color: #5B5B5B;
+}
+
+.dataset-item .dataset-content .dataset-heading {
+  font-size: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dataset-item .dataset-resources {
+  position: absolute;
+  bottom: 10px;
+}
+
+.dataset-item .dataset-resources .label {
+  padding: 5px 20px;
+  font-size: 14px;
+  font-weight: 200;
+  margin-top: 3px;
+}
+
+div.sort-datasets {
+  color: #555555;
+  font-size: 20px;
+  font-weight: 100;
+  margin: 15px 0px;
+}
+
+div.sort-datasets a.active {
+  font-weight: 500;
+}
+
+div.sort-datasets a {
+  color: #555555;
+}
+
+.apps-list {
+  text-align: center;
+  color: #5B5B5B;
+  padding: 50px;
+}
+
+.apps-list h3 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.apps-list > p {
+  margin-bottom: 50px;
+}
+
+.apps-list p {
+  color: #959595;
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.frame-app {
+  width: 230px;
+}
+
+.frame-app h2 {
+  color: #292929;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.frame-app .technologies {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}

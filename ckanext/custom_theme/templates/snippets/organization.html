@@ -1,0 +1,34 @@
+{% with truncate=truncate or 0, url=h.url_for(controller='organization', action='read', id=organization.name) %}
+  <div class="organization">
+    <a href="{{ url }}">
+      <!-- WARNING: Inline styling causes cancer -->
+      <div class="image image-circle" style="background-image: url('{{ organization.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}')">
+      </div>
+    </a>
+    <div class="organization-info">
+      <h1 class="heading">{{ organization.title or organization.name }}</h1>
+      {% if organization.description %}
+        <p class="description">
+          {{ h.markdown_extract(organization.description, 180) }}
+          {% link_for _('read more'), controller='organization', action='about', id=organization.name %}
+        </p>
+      {% else %}
+        <p class="empty">{{ _('There is no description for this organization') }}</p>
+      {% endif %}
+      <div class="stats">
+        <div>
+          <h1>{{organization.packages|length}}</h1>
+          <span>Datasets</span>
+        </div>
+        <div>
+          <h1>32</h1>
+          <span>Aplicaciones</span>
+        </div>
+        <div>
+          <h1>12</h1>
+          <span>APIs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endwith %}
