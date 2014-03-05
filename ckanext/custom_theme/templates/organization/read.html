@@ -1,7 +1,7 @@
 {% extends 'organization/read_base.html' %}
 
 {% block primary_content %}
-  {% snippet 'snippets/organization.html', organization=c.group_dict, show_nums=true %}
+  {% snippet 'organization/snippets/organization.html', organization=c.group_dict, show_nums=true %}
 {% endblock %}
 
 {% block package_list %}
