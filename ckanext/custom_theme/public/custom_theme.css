@@ -423,11 +423,13 @@ a.button-bordered {
 }
 
 .organization .stats {
+  text-align: left;
   display: block;
   margin-top: 20px;
 }
 
 .organization .stats div {
+  text-align: center;
   color: #506897;
   font-size: 24px;
   font-weight: 300;
