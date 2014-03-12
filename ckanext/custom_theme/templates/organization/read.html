@@ -1,7 +1,9 @@
 {% extends 'organization/read_base.html' %}
 
+{% set organization=c.group_dict %}
+
 {% block primary_content %}
-  {% snippet 'organization/snippets/organization.html', organization=c.group_dict, show_nums=true %}
+  {% snippet 'organization/snippets/organization.html', organization=organization, show_nums=true %}
 {% endblock %}
 
 {% block package_list %}
@@ -24,4 +26,14 @@
 
 {% block page_pagination %}
   {{ c.page.pager(q=c.q) }}
+{% endblock %}
+
+{% block apps_list %}
+  <h3>Apps C&iacute;vicas</h3>
+  <p>Descubre qui&eacute;nes usan y c&oacute;mo se usan los datos abiertos<br />en M&eacute;xico para mejorar el pa&iacute;s.</p>
+  {% resource "custom_theme/custom_theme_load_apps.js" %}
+  <div
+    data-module="custom_theme_load_apps"
+    data-module-organization="{{ organization.name }}" >
+  </div>
 {% endblock %}
