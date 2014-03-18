@@ -23,6 +23,14 @@ body {
 .masthead .content {
   position: static;
   display: inline-block;
+  width: 75%
+}
+
+.masthead .navigation {
+}
+
+.masthead .navigation.signin {
+  float: right
 }
 
 .masthead .navigation .nav-tabs {
@@ -53,7 +61,7 @@ body {
   display: inline-block;
   vertical-align: bottom;
   background-color: #151f31;
-  width: 400px;
+  width: 24%;
   height: 80px;
   text-align: right;
 }
