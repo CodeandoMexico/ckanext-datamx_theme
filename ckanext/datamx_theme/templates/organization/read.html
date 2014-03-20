@@ -31,9 +31,9 @@
 {% block apps_list %}
   <h3>Apps C&iacute;vicas</h3>
   <p>Descubre qui&eacute;nes usan y c&oacute;mo se usan los datos abiertos<br />en M&eacute;xico para mejorar el pa&iacute;s.</p>
-  {% resource "custom_theme/custom_theme_load_apps.js" %}
+  {% resource "datamx_theme/datamx_theme_load_apps.js" %}
   <div
-    data-module="custom_theme_load_apps"
+    data-module="datamx_theme_load_apps"
     data-module-organization="{{ organization.name }}" >
   </div>
 {% endblock %}

@@ -1,7 +1,7 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 
-class CustomThemePlugin(plugins.SingletonPlugin):
+class DatamxThemePlugin(plugins.SingletonPlugin):
     # Declare that this class implements IConfigurer.
     plugins.implements(plugins.IConfigurer)
 
@@ -20,4 +20,4 @@ class CustomThemePlugin(plugins.SingletonPlugin):
         # (relative to this plugin.py file), and 'example_theme' is the name
         # that we'll use to refer to this fanstatic directory from CKAN
         # templates.
-        toolkit.add_resource('fanstatic', 'custom_theme')
+        toolkit.add_resource('fanstatic', 'datamx_theme')

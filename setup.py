@@ -4,7 +4,7 @@ import sys, os
 version = '0.1'
 
 setup(
-	name='ckanext-custom_theme',
+	name='ckanext-datamx_theme',
 	version=version,
 	description="Codeando Mexico custom theme",
 	long_description="""\
@@ -16,7 +16,7 @@ setup(
 	url='datos.codeandomexico.org',
 	license='',
 	packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
-	namespace_packages=['ckanext', 'ckanext.custom_theme'],
+	namespace_packages=['ckanext', 'ckanext.datamx_theme'],
 	include_package_data=True,
 	zip_safe=False,
 	install_requires=[
@@ -25,6 +25,6 @@ setup(
 	entry_points=\
 	"""
         [ckan.plugins]
-        custom_theme=ckanext.custom_theme.plugin:CustomThemePlugin
+        datamx_theme=ckanext.datamx_theme.plugin:DatamxThemePlugin
 	""",
 )

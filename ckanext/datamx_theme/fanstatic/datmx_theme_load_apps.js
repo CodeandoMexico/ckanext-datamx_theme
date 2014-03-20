@@ -1,6 +1,6 @@
 "use strict";
 
-ckan.module("custom_theme_load_apps", function($, _) {
+ckan.module("datamx_theme_load_apps", function($, _) {
   return {
     initialize: function() {
       var organization = this.options.organization;
@@ -16,7 +16,7 @@ ckan.module("custom_theme_load_apps", function($, _) {
         success: function (data) {
           var index = 0;
           for(index in data) {
-            that.sandbox.client.getTemplate("custom_theme_application_frame.html", data[index], that._onReceiveSnippet);
+            that.sandbox.client.getTemplate("datamx_theme_application_frame.html", data[index], that._onReceiveSnippet);
           }
         }
       });
