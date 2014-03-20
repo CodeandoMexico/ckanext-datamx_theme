@@ -10,7 +10,6 @@
       {% if organization.description %}
         <p class="description">
           {{ h.markdown_extract(organization.description, 180) }}
-          {% link_for _('read more'), controller='organization', action='about', id=organization.name %}
         </p>
       {% else %}
         <p class="empty">{{ _('There is no description for this organization') }}</p>
