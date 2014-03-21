@@ -15,7 +15,7 @@
   </nav>
   <nav class="section navigation">
     {% if c.userobj %}
-      <ul class="dropdown nav nav-tabs push-from-left">
+      <ul class="dropdown nav nav-tabs push-from-right">
         <li>
           <a href="">
             {{ h.gravatar((c.userobj.email_hash if c and c.userobj else ''), size=30) }}
@@ -35,7 +35,7 @@
         </li>
       </ul>
     {% else %}
-      <ul class="nav nav-tabs push-from-left">
+      <ul class="nav nav-tabs push-from-right">
         {% block header_account_notlogged %}
           <li>{% link_for _('Log in'), controller='user', action='login' %}</li>
         {% endblock %}

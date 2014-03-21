@@ -79,8 +79,9 @@ body {
   list-style: none;
 }
 
-.masthead ul.push-from-left, .masthead .push-from-left {
-  margin-left: 140px;
+.masthead ul.push-from-right, .masthead .push-from-right {
+  position: absolute;
+  right: 10%;
 }
 
 ul.dropdown img.gravatar {
