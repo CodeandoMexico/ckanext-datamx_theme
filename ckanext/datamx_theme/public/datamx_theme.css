@@ -533,6 +533,15 @@ a.button-bordered {
   margin-top: 3px;
 }
 
+div.organization-actions {
+  padding-right: 110px;
+  line-height: 0px;
+}
+
+div.organization-actions div{
+  display: inline-block;
+}
+
 div.sort-datasets {
   color: #555555;
   font-size: 20px;
