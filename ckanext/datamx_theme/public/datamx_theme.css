@@ -550,7 +550,7 @@ div.sort-datasets {
 }
 
 div.sort-datasets a.active {
-  font-weight: 500;
+  font-weight: bold;
 }
 
 div.sort-datasets a {
