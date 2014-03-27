@@ -333,6 +333,7 @@ a.button {
   letter-spacing: 0.05em;
   display: inline-block;
   margin: 20px 0px 20px 0px;
+  font-size: 21px;
 }
 
 a.button:hover {
