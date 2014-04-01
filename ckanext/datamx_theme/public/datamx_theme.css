@@ -305,6 +305,10 @@ div.roles-sample p {
   margin: 10px 0px;
 }
 
+div.roles-sample a {
+  color: inherit;
+}
+
 div.roles-sample-green-bg {
   background-color: #00CC79;
 }
