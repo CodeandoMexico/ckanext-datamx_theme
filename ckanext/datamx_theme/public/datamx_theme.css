@@ -310,19 +310,19 @@ div.roles-sample a {
 }
 
 div.roles-sample-green-bg {
-  background-color: #00CC79;
+  background: url(/green_img_bg.png) no-repeat center center;
 }
 
 div.roles-sample-yellow-bg {
-  background-color: #ECBC2B;
+  background: url(/yellow_img_bg.png) no-repeat center center;
 }
 
 div.roles-sample-blue-bg {
-  background-color: #24AEED;
+  background: url(/blue_img_bg.png) no-repeat center center;
 }
 
 div.roles-sample-orange-bg {
-  background-color: #F06226;
+  background: url(/orange_img_bg.png) no-repeat center center;
 }
 
 div.roles-sample p {
