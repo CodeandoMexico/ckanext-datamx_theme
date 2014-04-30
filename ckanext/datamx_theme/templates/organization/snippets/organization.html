@@ -6,9 +6,9 @@
       </div>
     </a>
     <div class="organization-info">
-      <h1 class="heading">{{ organization.title or organization.name }}</h1>
+      <h1 class="organization-heading">{{ organization.title or organization.name }}</h1>
       {% if organization.description %}
-        <p class="description">
+        <p class="organization-description">
           {{ h.markdown_extract(organization.description, 180) }}
         </p>
       {% else %}
