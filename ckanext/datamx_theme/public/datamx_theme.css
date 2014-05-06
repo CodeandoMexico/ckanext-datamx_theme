@@ -379,7 +379,6 @@ a.button-bordered {
 
 .organization div {
   display: inline-block;
-  margin-right: 30px;
   vertical-align: top;
 }
 
@@ -424,7 +423,6 @@ a.button-bordered {
 
 .package-list {
   background: #EEEEEE;
-  width: 1080px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -584,6 +582,65 @@ div.sort-datasets a {
   .site-footer {
     padding: 20px;
   }
+
+  .dataset-list .dataset-item {
+    width: 200px;
+    height: 100px;
+  }
+
+  .dataset-item .dataset-content div {
+    display: none;
+  }
+
+  .dataset-item .dataset-content .dataset-heading {
+    font-size: 16px;
+    height: 2.3em;
+  }
+
+  .dataset-item .dataset-resources .label {
+    padding: 3px 15px;
+    font-size: 12px;
+  }
+
+  .organization-info h1 {
+    text-align: center;
+  }
+
+  .organization-info p {
+    text-align: center;
+  }
+
+  .organization .stats {
+    text-align: center;
+  }
+
+  .organization .stats div {
+    padding: 10px 15px;
+    border-width: 3px;
+    font-size: 20px;
+  }
+
+  .organization .stats div h1 {
+    font-size: 28px;
+    margin: -5px;
+  }
+
+  div.organization-actions {
+    line-height: inherit;
+  }
+
+  div.organization-actions div {
+    float: left;
+    clear: both;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -602,5 +659,33 @@ div.sort-datasets a {
   .footer-links .logo,
   .footer-links .all-links {
     margin: 0px;
+  }
+
+  .organization-info p {
+    width: auto;
+  }
+
+  .image-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
+
+  div.sort-datasets {
+    font-size: 16px;
+    font-weight: 200;
+  }
+
+  div.sort-datasets span, div.sort-datasets a {
+    display: block;
+    float: left;
+  }
+
+  .heading {
+    font-size: 25px;
+  }
+
+  .description {
+    font-size: 18px;
   }
 }
