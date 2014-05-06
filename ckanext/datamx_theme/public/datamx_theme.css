@@ -36,6 +36,12 @@ body {
   float: none;
 }
 
+.navbar .btn-navbar {
+  position: absolute;
+  top: 13px;
+  right: 25px;
+}
+
 .navbar .btn-navbar, .navbar .btn-navbar:hover {
   background: #FFFFFF;
 }
