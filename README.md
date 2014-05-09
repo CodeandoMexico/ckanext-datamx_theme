@@ -20,6 +20,9 @@ This will also register a plugin entry point, so you now should be able to add t
 ckan.plugins = datamx_theme
 ```
 ### Restart Apache
+```
+# service restart apache2
+```
 
 ## Screenshots
 ![DataMX](https://s3.amazonaws.com/github-static/datamxio.png)
