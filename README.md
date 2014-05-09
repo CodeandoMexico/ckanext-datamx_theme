@@ -19,6 +19,13 @@ This will also register a plugin entry point, so you now should be able to add t
 ```
 ckan.plugins = datamx_theme
 ```
+### Restart Apache
+
+## Screenshots
+![DataMX](https://s3.amazonaws.com/github-static/datamxio.png)
+
+##Using our code? We'd love to know
+We want to keep track of the projects that used our extension, let us know!
 
 ##¿Questions or issues?
 We keep the project's conversation in our issues page [issues](https://github.com/CodeandoMexico/ckan-kitchen/issues). If you have any other question you can reach us at <equipo@codeandomexico.org>.
