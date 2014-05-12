@@ -157,6 +157,13 @@ body {
   margin: 5px;
 }
 
+.module-content {
+  margin: 0px;
+  background-color: #EEEEEE;
+  padding: 20px 40px;
+  border-bottom: 1px solid #BEBEBE;
+}
+
 /* who uses it */
 .roles {
   padding: 25px 0px 25px 0px;
@@ -687,5 +694,14 @@ div.sort-datasets a {
 
   .description {
     font-size: 18px;
+  }
+
+  .search-form .search-input.search-giant input {
+    font-size: 14px;
+  }
+
+  .search-form .search-input.search-giant button i {
+    font-size: 22px;
+    width: 22px;
   }
 }
