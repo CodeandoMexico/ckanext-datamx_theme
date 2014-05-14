@@ -367,12 +367,12 @@ a.button-bordered {
   background-repeat: no-repeat;
 }
 
-.heading {
+.organization-heading {
   color: #FFFFFF;
   font-size: 50px;
 }
 
-.description {
+.organization-description {
   color: #FFFFFF;
   font-size: 22px;
   line-height: 30px;
