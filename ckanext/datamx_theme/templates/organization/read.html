@@ -10,9 +10,9 @@
 {% endblock %}
 
 {% block package_list %}
-  {% if c.page.items %}
-    <div class="organization-actions">
-      <div class="sort-datasets">
+  <div class="organization-actions">
+    <div class="sort-datasets">
+      {% if c.page.items %}
         <span>Ordenar por:</span>
         {% if c.sort_by_selected != "score desc" %}
           <a class="active" href="{{ url }}?sort=metadata_modified+desc">M&aacute;s Nuevo</a>
@@ -23,16 +23,19 @@
           <span>/</span>
           <a class="active" href="{{ url }}?sort=score+desc">M&aacute;s Popular</a>
         {% endif %}
-      </div>
-      <div class="pull-right">
-        {% if h.check_access("organization_update", {"id": organization.id}) %}
-          {% link_for _("Manage"), controller="organization", action="edit", id=organization.name, class_="btn", icon="wrench" %}
-        {% endif %}
-        {% if h.check_access("package_create", { "owner_org": organization.id }) %}
-          {% link_for _("Add Dataset"), controller="package", action="new", group=organization.id, class_="btn btn-primary", icon="plus-sign-alt" %}
-        {% endif %}
-      </div>
+      {% endif %}
     </div>
+    <div class="pull-right">
+      {% if h.check_access("organization_update", {"id": organization.id}) %}
+        {% link_for _("Manage"), controller="organization", action="edit", id=organization.name, class_="btn", icon="wrench" %}
+      {% endif %}
+      {% if h.check_access("package_create", { "owner_org": organization.id }) %}
+        {% link_for _("Add Dataset"), controller="package", action="new", group=organization.id, class_="btn btn-primary", icon="plus-sign-alt" %}
+      {% endif %}
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  {% if c.page.items %}
     {{ h.snippet('snippets/package_list.html', packages=c.page.items) }}
   {% endif %}
 {% endblock %}

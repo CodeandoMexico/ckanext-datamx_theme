@@ -12,158 +12,66 @@ body {
 }
 
 /* ========================================================================
-   The main masthead bar that contains the site logo, nav links, and search
+   The main nav bar that contains the site logo, nav links, and search
    ======================================================================== */
 
-.masthead {
-  background: #23324F;
-  border-bottom: 1px solid #151F31;
-}
-
-.masthead .content {
-  position: static;
-  display: inline-block;
-}
-
-.masthead .navigation .nav-tabs {
-  border-bottom: 0px;
-  font-size: 1.2em;
-  font-weight: 200;
-}
-
-.masthead .nav {
-  margin-left: 20px;
-}
-
-.masthead .nav-tabs>li>a {
-  margin-right: 20px;
-}
-
-.masthead .nav-tabs>li>a:hover {
-  font-size: 1.0em;
-}
-
-.masthead .navigation .nav-tabs li a:hover,
-.masthead .navigation .nav-tabs li.active a {
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid rgba(0, 0, 0, 0);
-}
-
-.masthead .header-image {
-  display: inline-block;
-  vertical-align: bottom;
+.navbar .brand {
   background-color: #151f31;
-  width: 400px;
-  height: 80px;
-  text-align: right;
+  padding: 20px 100px;
 }
 
-.masthead .container {
-  width: auto;
-}
-
-.masthead a.logo {
-  display: block;
-  height: 80px;
-  text-align: center;
-  padding: 20px;
-}
-
-
-/* Dropdown nav */
-.masthead ul.dropdown {
-  font-size: 1.2em;
-  font-weight: 200;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.masthead ul.push-from-right, .masthead .push-from-right {
-  position: absolute;
-  right: 10%;
-}
-
-ul.dropdown img.gravatar {
-  position: relative;
-  top: -3px;
-}
-
-ul.dropdown li {
-  display: block;
-  position: relative;
-  float: left;
-}
-
-ul.dropdown li ul {
-  display: none;
-  background: #FFFFFF;
-  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
-  padding-top: 7px;
-  padding-bottom: 7px;
-  border-radius: 5px;
-  background-clip: padding-box;
-  z-index: 100;
-}
-
-ul.dropdown li a {
-  display: block;
-  text-decoration: none;
-  color: #FFFFFF;
-  margin-left: 1px;
-  white-space: nowrap;
-}
-
-ul.dropdown > li > a {
-  height: 40px;
-  position: relative;
-  top: -5px;
-}
-
-ul.dropdown li ul li a{
-  color: #23324F;
-  font-size: 1.3em;
-  font-weight: 200;
-}
-
-ul.dropdown li:hover ul {
-  display: block;
-  position: absolute;
-}
-
-ul.dropdown li:hover ul:before{
-  content: '';
-  display: inline-block;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #CCCCCC;
-  border-bottom-color: #FFFFFF;
-  position: absolute;
-  top: -8px;
-  left: 55px;
-}
-
-ul.dropdown li ul:first-child {
-  border-radius: 10px;
-}
-
-ul.dropdown li:hover li {
-  float: none;
-  font-size: 11px;
-}
-
-ul.dropdown li:hover li a {
-  background: #FFFFFF;
-  padding: 5px 30px 5px 30px;
-}
-
-ul.dropdown.nav.nav-tabs li:hover li a:hover {
-  background: #23324F;
-  color: #FFFFFF;
+.navbar-inner {
   border: none;
+  background: #283858;
 }
 
-/* /dropdown nav */
+.navbar {
+  margin: 0px;
+  font-weight: 200;
+  font-size: 18px;
+}
+
+.navbar .nav {
+  margin-bottom: 17px;
+  float: none;
+}
+
+.navbar .btn-navbar {
+  position: absolute;
+  top: 13px;
+  right: 25px;
+}
+
+.navbar .btn-navbar, .navbar .btn-navbar:hover {
+  background: #FFFFFF;
+}
+
+.navbar .btn-navbar .icon-bar {
+  background-color: #151f31;
+}
+
+.navbar .nav>li>a {
+  color: #ffffff;
+  text-shadow: none;
+}
+
+.navbar .nav>li>a:focus, .navbar .nav>li>a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-collapse.collapse {
+  vertical-align: middle;
+}
+
+.navbar .nav li.dropdown.open>.dropdown-toggle {
+  background-color: #283858;
+  color: #ffffff;
+}
+
+.dropdown-menu>li>a:hover {
+  background: #283858;
+}
 
 /* Index search snippet */
 
@@ -188,7 +96,7 @@ ul.dropdown.nav.nav-tabs li:hover li a:hover {
   border: none;
   box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.3);
   border-radius: 3px;
-  font-size: 1.8em;
+  font-size: 24px;
   font-weight: 100;
   line-height: 1.0em;
 }
@@ -196,6 +104,7 @@ ul.dropdown.nav.nav-tabs li:hover li a:hover {
 .homepage .search-giant {
   display: inline-block;
 }
+
 .homepage .module-search .module-content .heading {
   margin: 10px 0px 10px 0px;
   font-size: 2.1em;
@@ -470,7 +379,6 @@ a.button-bordered {
 
 .organization div {
   display: inline-block;
-  margin-right: 30px;
   vertical-align: top;
 }
 
@@ -515,7 +423,6 @@ a.button-bordered {
 
 .package-list {
   background: #EEEEEE;
-  width: 1080px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -649,4 +556,136 @@ div.sort-datasets a {
   font-size: 18px;
   margin-top: 30px;
   margin-bottom: 0px;
+}
+
+@media (max-width: 979px) {
+  .nav-collapse .nav>li>a:hover, .nav-collapse .nav>li>a:focus,
+  .nav-collapse .dropdown-menu a:hover, .nav-collapse .dropdown-menu a:focus {
+    background-color: #151f31;
+  }
+  .nav-collapse .nav>li>a,
+  .nav-collapse .dropdown-menu a {
+    color: #ffffff;
+    text-shadow: none;
+    font-weight: 200;
+  }
+
+  .nav-collapse .dropdown-menu a {
+    margin-left: 40px;
+  }
+
+  .homepage .search-form .search-input.search-giant input {
+    width: 400px;
+    font-size: 16px;
+  }
+
+  .site-footer {
+    padding: 20px;
+  }
+
+  .dataset-list .dataset-item {
+    width: 200px;
+    height: 100px;
+  }
+
+  .dataset-item .dataset-content div {
+    display: none;
+  }
+
+  .dataset-item .dataset-content .dataset-heading {
+    font-size: 16px;
+    height: 2.3em;
+  }
+
+  .dataset-item .dataset-resources .label {
+    padding: 3px 15px;
+    font-size: 12px;
+  }
+
+  .organization-info h1 {
+    text-align: center;
+  }
+
+  .organization-info p {
+    text-align: center;
+  }
+
+  .organization .stats {
+    text-align: center;
+  }
+
+  .organization .stats div {
+    padding: 10px 15px;
+    border-width: 3px;
+    font-size: 20px;
+  }
+
+  .organization .stats div h1 {
+    font-size: 28px;
+    margin: -5px;
+  }
+
+  div.organization-actions {
+    line-height: inherit;
+  }
+
+  div.organization-actions div {
+    float: left;
+    clear: both;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+
+  .homepage .search-form .search-input.search-giant input {
+    width: 300px;
+  }
+
+  .site-footer {
+    padding: 5px;
+  }
+
+  .footer-links .logo,
+  .footer-links .all-links {
+    margin: 0px;
+  }
+
+  .organization-info p {
+    width: auto;
+  }
+
+  .image-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
+
+  div.sort-datasets {
+    font-size: 16px;
+    font-weight: 200;
+  }
+
+  div.sort-datasets span, div.sort-datasets a {
+    display: block;
+    float: left;
+  }
+
+  .heading {
+    font-size: 25px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
 }
