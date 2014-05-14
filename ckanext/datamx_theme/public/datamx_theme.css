@@ -558,6 +558,12 @@ div.sort-datasets a {
   margin-bottom: 0px;
 }
 
+@media (max-width: 1200px){
+  .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: 940px;
+  }
+}
+
 @media (max-width: 979px) {
   .nav-collapse .nav>li>a:hover, .nav-collapse .nav>li>a:focus,
   .nav-collapse .dropdown-menu a:hover, .nav-collapse .dropdown-menu a:focus {
