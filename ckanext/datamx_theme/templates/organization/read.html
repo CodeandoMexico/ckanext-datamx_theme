@@ -33,6 +33,10 @@
         {% link_for _("Add Dataset"), controller="package", action="new", group=organization.id, class_="btn btn-primary", icon="plus-sign-alt" %}
       {% endif %}
     </div>
+    <div class="filter-datasets">
+      {% set tags=h.get_facet_items_dict('tags') %}
+      {% snippet 'organization/snippets/tag_list.html', tags=tags, _tag_class='label', _organization_url=organization.name %}
+    </div>
   </div>
   <div class="clearfix"></div>
   {% if c.page.items %}

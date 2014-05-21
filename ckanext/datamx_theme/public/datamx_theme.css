@@ -507,6 +507,26 @@ div.organization-actions div{
   display: inline-block;
 }
 
+.filter-datasets {
+  margin: 20px;
+}
+
+.filter-datasets ul li a {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.filter-datasets ul li a:hover {
+  text-decoration: none;
+}
+
+.filter-datasets .label {
+  padding: 8px 12px;
+  background-color: #00469E;
+  margin-top: 8px;
+}
+
 div.sort-datasets {
   color: #555555;
   font-size: 20px;
