@@ -350,6 +350,46 @@ a.button-bordered {
   margin: 0px 50px 0px 50px;
 }
 
+
+/* Subscription*/
+
+.subscription {
+text-align: center;
+margin: 60px 10px;
+}
+
+#msg {
+  font-size: 26px;
+  letter-spacing: 0.1em;
+  margin: 10px 0px;
+  line-height: initial;
+}
+
+.message {
+  margin: 20px 0px;
+}
+.subscription .mail, .subscription .send {
+  display: inline-block;
+}
+
+.button {
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.5);
+  letter-spacing: 0.05em;
+  display: inline-block;
+  margin: 0px;
+  font-size: 18px;
+}
+
+#email {
+  font-size: 16px;
+  margin: 10px 5px;
+  padding: 10px;
+  width: 20em;
+} 
+
 /* Organization */
 
 .organization-page {
