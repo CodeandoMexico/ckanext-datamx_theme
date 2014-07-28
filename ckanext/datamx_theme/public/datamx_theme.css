@@ -304,7 +304,7 @@ a.button-bordered {
 
 .collaborators div {
   display: inline-block;
-  margin: 10px 20px 10px 20px;
+  margin: 10px;
 }
 
 .collaborators div img {
@@ -372,6 +372,10 @@ margin: 60px 10px;
   margin: 20px 0px;
 }
 .subscription .mail, .subscription .send {
+  display: inline-block;
+}
+.subscription .form-inline {
+  margin: 0px;
   display: inline-block;
 }
 
