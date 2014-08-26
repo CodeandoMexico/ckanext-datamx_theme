@@ -54,6 +54,7 @@ body {
 .navbar .nav>li>a {
   color: #ffffff;
   text-shadow: none;
+  padding: 10px 15px 0px;
 }
 
 .navbar .nav>li>a:focus, .navbar .nav>li>a:hover {
