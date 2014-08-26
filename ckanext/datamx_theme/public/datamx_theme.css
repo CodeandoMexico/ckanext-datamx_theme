@@ -55,6 +55,7 @@ body {
   color: #ffffff;
   text-shadow: none;
   padding: 10px 15px 0px;
+  letter-spacing: 1px;
 }
 
 .navbar .nav>li>a:focus, .navbar .nav>li>a:hover {
