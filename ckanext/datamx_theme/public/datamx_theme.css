@@ -17,7 +17,8 @@ body {
 
 .navbar .brand {
   background-color: #151f31;
-  padding: 20px 100px;
+  padding: 15px 83px;
+  max-width: 194px;
 }
 
 .navbar-inner {
@@ -28,7 +29,7 @@ body {
 .navbar {
   margin: 0px;
   font-weight: 200;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .navbar .nav {
@@ -53,6 +54,8 @@ body {
 .navbar .nav>li>a {
   color: #ffffff;
   text-shadow: none;
+  padding: 10px 15px 0px;
+  letter-spacing: 1px;
 }
 
 .navbar .nav>li>a:focus, .navbar .nav>li>a:hover {
