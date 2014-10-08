@@ -295,7 +295,7 @@ a.button-bordered {
 
 .collaborators {
   background-color: #FFFFFF;
-  padding: 25px 10px 25px 10px;
+  padding: 25px 0px 25px 0px;
   color: #858585;
   text-align: center;
 }
@@ -306,13 +306,21 @@ a.button-bordered {
 }
 
 .collaborators div {
-  display: inline-block;
+  display: inline-table;
   margin: 10px;
 }
 
 .collaborators div img {
   margin: 30px 10px 30px 10px;
   height: 70px;
+}
+
+.allies {
+  width: 30%;
+}
+
+.community, .supporters {
+  width: 20%;
 }
 
 /* Footer */
@@ -729,6 +737,15 @@ div.sort-datasets a {
   .description {
     font-size: 20px;
   }
+
+  .collaborators div {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+  }
+  .allies, .community, .supporters {
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -789,4 +806,15 @@ div.sort-datasets a {
   #email {
     width: 16em;
   }
+
+  .collaborators div {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+  }
+
+ .allies, .community, .supporters {
+  width: 100%;
+ }
+  
 }
