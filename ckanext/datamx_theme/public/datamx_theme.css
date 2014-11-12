@@ -658,6 +658,10 @@ div.sort-datasets a {
     font-weight: 200;
   }
 
+  .navbar-inner{
+    background: #151f31;
+  }
+
   .nav-collapse .dropdown-menu a {
     margin-left: 40px;
   }
