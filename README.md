@@ -1,7 +1,7 @@
 CKAN extension
 ============
 
-CKAN extension for Datamx(ckanext-datamx-theme)
+CKAN extension for Datamx(ckanext-datamx)
 
 ##Dependencies
 - CKAN
@@ -35,7 +35,7 @@ We want to keep track of the projects that used our extension, let us know!
 We keep the project's conversation in our issues page [issues](https://github.com/CodeandoMexico/ckan-kitchen/issues). If you have any other question you can reach us at <equipo@codeandomexico.org>.
 
 ##Contribute
-We want this project to be the result of a community effort. You can collaborate with [code](https://github.com/CodeandoMexico/ckan-kitchen/pulls), [ideas](https://github.com/CodeandoMexico/ckanext-datamx_theme/issues) and [bugs](https://github.com/CodeandoMexico/ckanext-datamx_theme/issues)
+We want this project to be the result of a community effort. You can collaborate with [code](https://github.com/CodeandoMexico/ckan-kitchen/pulls), [ideas](https://github.com/CodeandoMexico/ckanext-datamx/issues) and [bugs](https://github.com/CodeandoMexico/ckanext-datamx/issues)
 
 ##Core Team
 This project is an initiative of [Codeando México](https://github.com/CodeandoMexico?tab=members).

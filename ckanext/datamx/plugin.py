@@ -20,4 +20,4 @@ class DatamxThemePlugin(plugins.SingletonPlugin):
         # (relative to this plugin.py file), and 'example_theme' is the name
         # that we'll use to refer to this fanstatic directory from CKAN
         # templates.
-        toolkit.add_resource('fanstatic', 'datamx_theme')
+        toolkit.add_resource('fanstatic', 'datamx')

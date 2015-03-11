@@ -16,7 +16,7 @@ setup(
 	url='datos.codeandomexico.org',
 	license='',
 	packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
-	namespace_packages=['ckanext', 'ckanext.datamx_theme'],
+	namespace_packages=['ckanext', 'ckanext.datamx'],
 	include_package_data=True,
 	zip_safe=False,
 	install_requires=[
@@ -25,6 +25,6 @@ setup(
 	entry_points=\
 	"""
         [ckan.plugins]
-        ckanext-datamx=ckanext.datamx_theme.plugin:DatamxThemePlugin
+        ckanext-datamx=ckanext.datamx.plugin:DatamxThemePlugin
 	""",
 )
