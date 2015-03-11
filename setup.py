@@ -4,7 +4,7 @@ import sys, os
 version = '0.1'
 
 setup(
-	name='ckanext-datamx_theme',
+	name='ckanext-datamx',
 	version=version,
 	description="Codeando Mexico custom theme",
 	long_description="""\
@@ -25,6 +25,6 @@ setup(
 	entry_points=\
 	"""
         [ckan.plugins]
-        datamx_theme=ckanext.datamx_theme.plugin:DatamxThemePlugin
+        ckanext-datamx=ckanext.datamx_theme.plugin:DatamxThemePlugin
 	""",
 )
