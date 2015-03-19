@@ -1,82 +1,316 @@
-{% ckan_extends %}
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Datamx.io: La plataforma de datos abiertos de México</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    {% resource 'ckanext-datamx/styles_bs3/datamx-bs3.css' %}
+    <script src="bower_components/modernizr/modernizr.js"></script>
 
-{% block primary_content %}
-  {% snippet 'home/snippets/search.html'  %}
-  <p class="joined-orgs-msg">Hay <b><a href="/organization">{{ h.get_site_statistics()["organization_count"] }}</a></b> organizaciones de la sociedad civil y gobiernos publicando <br />sus datos abiertos a la comunidad</p>
-  <div class="roles">
-    <h2>&iquest;Qui&eacute;nes usan datamx?</h2>
-    <p>Descubre qui&eacute;nes usan y c&oacute;mo se usan los datos abiertos<br />en M&eacute;xico para mejorar el pa&iacute;s.</p>
-    <div class="roles-container">
-      <div class="frame-round frame-round-white-bg">
-        <h2>Creadores</h2>
-        <p>APIs Visualizaciones Open source Datos abiertos</p>
-        <a class="button button-green" href="http://docs.ckan.org/en/ckan-2.2/api.html">API Docs</a>
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <div class="container-fluid separated-bottom">
+      <div class="header">
+        <nav class="navbar navbar-codeando">
+          <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#"><img class="logo" src="/images/cmx-logo.png"> </a>
+          </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ h.url_for(controller='package', action='search') }}">Datos</a></li>
+        <li><a href="{{ h.url_for(controller='organization', action='index') }}">Organizaciones</a></li>
+        <li><a href="http://paginas.datamx.io/desarrolladores/">Desarrolladores</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Participa <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="{{ h.url_for(controller='package', action='new') }}">Publica datos</a></li>
+            <li><a href="{{ h.url_for(controller='package', action='search') }}">Usa datos</a></li>
+            <li><a href="#">Aprende datos abiertos</a></li>
+            <li><a href="#">Comunidad</a></li>
+            <li><a href="http://apertura.datamx.io">Centro de Apertura</a></li>
+          </ul>
+
+            {% if c.userobj %}
+         <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                  {{ h.gravatar((c.userobj.email_hash if c and c.userobj else ''), size=30) }}
+                  <span class="username">{{ c.userobj.display_name }}</span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="{{ h.url_for(controller='user', action='read', id=c.userobj.name) }}">Perfil</a></li>
+                  {% if c.userobj.sysadmin %}
+                    <li><a href="{{ h.url_for(controller='admin', action='index') }}">Admin</a></li>
+                  {% endif %}
+                  <li>
+                    <a href="{{ h.url_for(controller='user', action='dashboard') }}">Panel de Control</a>
+                  </li>
+                  <li><a href="{{ h.url_for(controller='user', action='edit', id=c.userobj.name) }}">Opciones</a></li>
+                  <li><a href="{{ h.url_for('/user/_logout') }}">Logout</a></li>
+                </ul>
+            {% else %}
+                <li>{% link_for _('Log in'), controller='user', action='login' %}
+            {% endif %}
+        </li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+        </nav>
       </div>
-      <div class="roles-sample roles-sample-green-bg frame-round">
-        <h2>App C&iacute;vicas</h2>
-        <p><a href="http://reportesapao.oaxaca.gob.mx/" target="_blank">URBEM, plataforma para reportes ciudadanos en Oaxaca.</a></p>
+
+      <div class="jumbotron">
+        <h2>Datos abiertos de ciudadanos para ciudadanos</h2>
+        <p class="lead">Encuentra datos públicos de  sociedad civil, empresas,<br/>gobiernos y academia en un solo lugar.</p>
+        <div class="row">
+          <div class="separated col-md-5 col-md-offset-1">
+            <img class="mini-separated" src="/images/publica.svg">
+           <p class="mini-separated">Entiendo como colaborar<br/> publicando datos</p>
+            <a href="{{ h.url_for(controller='package', action='new') }}">
+              <button class="btn large">Publica datos</button>
+            </a>
+          </div>
+          <div class="separator separated col-md-5">
+            <img class="mini-separated" src="/images/usa.svg">
+            <p class="mini-separated">Descubre como usar<br/>datos abiertos</p>
+            <a href="{{ h.url_for(controller='package', action='search') }}">
+              <button class="btn large">Usa datos</button>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="roles-container">
-      <div class="frame-round frame-round-white-bg">
-        <h2>Gobiernos</h2>
-        <p>Publica<br />Mide<br />Comparte<br />Datos<br /></p>
-        <a class="button button-blue" href="/dataset/new">Publicar</a>
-      </div>
-      <div class="roles-sample roles-sample-blue-bg frame-round">
-        <h2>Transparencia</h2>
-        <p><a href="http://oaxtransparente.datamx.io" target="_blank">Abre tus datos a la comunidad y fomenta la innovación cívica</a></p>
-      </div>
-    </div>
-    <div class="roles-container">
-      <div class="roles-sample roles-sample-yellow-bg frame-round">
-        <h2>Presupuestos</h2>
-        <p><a href="http://alcalde-como-vamos.datamx.io" target="_blank">Analiza los presupuestos de la zona metropolitana de Monterrey.</a></p>
-      </div>
-      <div class="frame-round frame-round-white-bg">
-        <h2>Periodistas</h2>
-        <p>Visualiza<br />Analiza<br />Descubre<br />Datos abiertos</p>
-        <a class="button button-yellow" href="/dataset">Explorar</a>
-      </div>
-    </div>
-    <div class="roles-container">
-      <div class="roles-sample roles-sample-orange-bg frame-round">
-        <h2>Visualizaciones</h2>
-        <p><a href="http://cuantodebemos.mx" target="_blank">Conoce la deuda de tu estado. Encuéntralo en CuantoDebemos.mx</a></p>
-      </div>
-      <div class="frame-round frame-round-white-bg">
-        <h2>Sociedad</h2>
-        <p>Decide<br />Descubre<br />Act&uacute;a<br />Datos abiertos</p>
-        <a class="button button-orange" href="/dataset">Visualizar</a>
+
+    <div class="container-fluid container-white separated">
+      <div class="">
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 center-text">
+
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators separated-top">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active">
+
+    </li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+        <h2>De la brigada DF</h1>
+          <p class="lead separated-bottom">Conoce los indicadores de pobreza en México</p>
+      <img src="http://codeforbtv.org/img/events/national-day-of-civic-hacking-2014-780x320.jpg" alt="...">
+      <div class="carousel-caption">
+        ...
       </div>
     </div>
-    <div class="clearfix"></div>
+    <div class="item">
+        <h2>De la brigada DF</h1>
+          <p class="lead separated-bottom">Conoce los indicadores de pobreza en México</p>
+      <img src="http://codeforbtv.org/img/events/design-workshop-780x320.jpg" alt="...">
+    </div>
+    ...
   </div>
-  {% snippet "home/snippets/subscription.html" %}
-  <div class="collaborators">
-    <div class="allies">
-      <h2>Nuestros Aliados</h2>
-      <a href="http://imco.org.mx/home/" target="_blank">
-        <img src="/imco_logo.jpg" />
-      </a>
-      <a href="http://www.oaxtransparente.oaxaca.gob.mx/" target="_blank">
-        <img src="/oaxtransparente_logo.png" />
-      </a>
-      <a href="http://www.comovamosnl.org/" target="_blank">
-        <img src="/alcalde_logo.png" />
-      </a>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <img src="/images/flechaizq.svg"  class="glyphicon glyphicon-chevron-left" aria-hidden="true"></img>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <img src="/images/flechader.svg" class="glyphicon glyphicon-chevron-right" aria-hidden="true"></img>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+        </div>
+        </div>
+      </div>
+
     </div>
-    <div class="community">
-      <h2>Parte de la comunidad</h2>
-      <a href="http://opendata.mx" target="_blank">
-        <img src="/opendatamx_logo.png" />
-      </a>
+    <div class="container-fluid container-blue separated">
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 center-text separated">
+            <h3 class="white">Explora las distintas categorias de <span class="blue">datos abiertos</span></h3>
+            <p class="separated-bottom">dummy text, más copy aquí abajo</p>
+
+            <div class="row separated-bottom">
+              <ul class="list-inline">
+                <li class="thumbnail">
+                  <img src="/images/iconoengrane.svg"></img>
+                  <div class="caption">
+                    <a href="{{ h.url_for(controller='group', action='read', id='administracion') }}">
+                      <button class="btn btn-white medium">Administración</button>
+                    </a>
+                  </div>
+                </li>
+                <li class="thumbnail">
+                  <img src="/images/iconobirrete.svg"></img>
+                  <div class="caption">
+                    <a href="{{ h.url_for(controller='group', action='read', id='educacion') }}">
+                      <button class="btn btn-white medium">Educación</button>
+                    </a>
+                  </div>
+                </li>
+                <li class="thumbnail">
+                  <img src="/images/iconomaletin.svg"></img>
+                  <div class="caption">
+                    <a href="{{ h.url_for(controller='group', action='read', id='empleo') }}">
+                      <button class="btn btn-white medium">Empleo</button>
+                    </a>
+                  </div>
+                </li>
+                <li class="thumbnail">
+                  <img src="/images/iconocartera.svg"></img>
+                  <div class="caption">
+                    <a href="{{ h.url_for(controller='group', action='read', id='presupuestos') }}">
+                      <button class="btn btn-white medium">Presupuestos</button>
+                    </a>
+                  </div>
+                </li>
+                <li class="thumbnail">
+                  <img src="/images/iconosalud.svg"></img>
+                  <div class="caption">
+                    <a href="{{ h.url_for(controller='group', action='read', id='salud') }}">
+                        <button class="btn btn-white medium">Salud</button>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+              <a href="{{ h.url_for(controller='package', action='search') }}" class="blue"> Ver todos los datos  ></a>
+          </div>
+      </div>
     </div>
-    <div class="supporters">
-      <h2>Con apoyo de</h2>
-      <a href="http://www.avina.net/" target="_blank">
-        <img src="/avina_americas.png" />
-      </a>
+
+  <div class="container-fluid container-white separated">
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1 center-text separated">
+        <h3 class="blue">Datos abiertos populares</h3>
+        <p class="separed-bottom">Explora los  datos que están siendo más utilizados por la comunidad</p>
+      </div>
     </div>
   </div>
-{% endblock %}
+
+  <div class="container-fluid separated">
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1 center-text separated-top">
+        <p class="white">Súmate a la comunidad de datos abiertos de México</p>
+        <form>
+          <div class="input-group-lg separated-bottom">
+            <input type="email" class="email" placeholder="Correo electrónico" name="email"/>
+            <button class="btn tick"><img src="/images/tick.svg"></img></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="footer container-fluid container-white separated-top separated-bottom">
+      <div class="separation separated-bottom">
+        <div class="row">
+          <div class="col-xs-offset-1 col-xs-4 logo"><img src="http://datamx.io/logo_cmx.png"></img></div>
+            <ul class="footer-menu col-xs-6">
+            <li>
+                <ul class="">
+                  <li class="footer-menu-head">
+                      Datos
+                  </li>
+                  <li class="">
+                      <a href="{{ h.url_for(controller='organization', action='index') }}">Organizaciones </a>
+                  </li>
+                  <li>
+                      <a href="{{ h.url_for(controller='package', action='search') }}">Categorías </a>
+                  </li>
+                 </ul>
+            </li>
+            <li>
+              <ul>
+                <li class="footer-menu-head">Desarrolladores</li>
+                <li>
+                  <a href="#">APIs</a>
+                </li>
+                <li>
+                  <a href="http://estandares.datamx.io">Estándares</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li class="footer-menu-head">Participa</li>
+                <li><a href="#">Abre datos</a></li>
+                <li><a href="#">Utiliza datos</a></li>
+                <li><a href="#">Aprende</a></li>
+                <li><a href="http://comunidad.codeandomexico.org">Comunidad</a></li>
+                <li><a href="http://apertura.datamx.io/">Centro de Apertura</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li class="footer-menu-head">Acerca</li>
+                <li><a href="http://paginas.datamx.io/about/">¿Qué es?</a></li>
+                <li><a href="http://paginas.datamx.io/faq/">FAQ</a></li>
+                <li><a href="http://paginas.datamx.io">Blog</a></li>
+              </ul>
+            </li>
+            <li class="gt">
+              <ul>
+                <li><a href="http://github.com/codeandomexico"><img src="/images/github.svg"></img></a></li>
+                <li><a href="http://twitter.com/datamx_io"><img src="/images/twitter.svg"></img></a></li>
+              </ul>
+            </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+</body>
+</html>
