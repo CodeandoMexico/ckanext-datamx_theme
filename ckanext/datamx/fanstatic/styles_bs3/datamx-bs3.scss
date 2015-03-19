@@ -1,0 +1,371 @@
+@import "main.scss";
+
+// Colors
+$codeando-light: #2F9DE6;
+$codeando-dark: #283858;
+$codeando-yellow: #FFB112;
+$codeando-grey: #7B7B7B;
+
+// Fonts
+$font-stack: Lato, sans-serif;
+
+// Sizes
+$container-base-separation: 3em;
+
+body {
+    font-family: $font-stack;
+    font-weight: 300;
+    background-color: $codeando-dark;
+    color: white;
+    font-size: 14px;
+    padding-bottom: 0px;
+}
+
+
+// Navbar
+.brand {
+    //padding: 15px 83px;
+    max-width: 12.35em;
+    float: left;
+    display: block;
+    // padding: 10px 1.25em 10px;
+    //font-size: 1.5em;
+    //font-weight: 200;
+    color: #777777;
+    text-shadow: 0 1px 0 #ffffff;
+    vertical-align: middle;
+    
+   .logo {
+      max-width: 100%;
+      width: auto\9;
+      height: auto;
+      vertical-align: middle;
+      border: 0;
+   }
+}
+
+.gravatar{
+  height: auto;
+  width: 1.4em;
+}
+
+
+.navbar-toggle {
+    vertical-align: middle;
+  background-color: transparent;
+  border-color: $codeando-light;
+  
+  color: white;
+  
+  span {
+      background-color: $codeando-light;
+  }
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus,
+.dropdown-menu {
+    background-color: #253350;
+    border-color: #253350;
+    color: white;
+}
+
+.navbar-collapse {
+    li {
+        
+     a { 
+          color: white;
+        &:hover, &:focus,  {
+          background: $codeando-light;
+          border-color: $codeando-light;
+          color: white;
+        }
+      }
+      
+      &:hover {
+          background: transparent;
+          border-color: $codeando-light;
+          color: $codeando-light;
+      }
+    }
+}
+
+.header, .jumbotron {
+    border-bottom: none; // remove bar
+    p {
+      font-size: 14px;
+    }
+    .lead {
+      font-size: 16px;
+    }
+}
+.footer {
+    border-top: none;
+}
+
+p {
+    font-size: 14px;
+}
+
+.lead {
+    font-size: 16px;
+}
+
+.jumbotron .btn {
+    font-size: 14px;
+}
+
+
+.play-icon {
+    width: 45px;
+}
+
+// Titles
+
+h1, h2 {
+    color: $codeando-light  !important;
+}
+
+.jumbotron  {
+    background-color: transparent;
+}
+
+.btn {
+    font: $font-stack;
+    // font-weight: bold;
+    background-color: transparent;
+    border-radius: 50px;
+    border-color: $codeando-light;
+    border-width: 2px;
+    color: $codeando-light;
+    
+    &:hover, &:focus {
+        background-color: $codeando-light;
+        color: white;
+        border-color: $codeando-light;
+    }
+    
+    &.medium {
+        width: 120px; 
+    }
+    
+    &.large {
+        width: 180px;
+        // padding: 14px 52px;
+    }
+}
+
+.btn-warning, .btn-yellow {
+    font: $font-stack;
+    background-color: transparent;
+    border-radius: 50px;
+    border-color: $codeando-yellow;
+    color: $codeando-yellow;
+    
+    &:hover, &:focus {
+        background-color: $codeando-yellow;
+        border-color: lighten($codeando-yellow, 5%);
+    }
+}
+
+.btn-white {
+    font: $font-stack;
+    background-color: transparent;
+    border-radius: 50px;
+    border-color: white;
+    color: white;
+    
+    &:hover {
+        background-color: transparent;
+        border-color: $codeando-light;
+        color: white;
+    }
+}
+
+.btn-grey {
+    font: $font-stack;
+    background-color: transparent;
+    border-radius: 50px;
+    border-color: $codeando-grey;
+    color: $codeando-grey;
+    
+    &:hover {
+        background-color: $codeando-grey;
+        border-color: $codeando-grey;
+        color: white;
+    }
+}
+
+.container, .container-fluid {
+    &.container-blue {
+      background-color: $codeando-dark;
+      color: white;    
+    }
+    
+    &.container-white {
+      background-color: white;
+      color: black;
+    }
+    
+    &.separated {
+      padding-top: $container-base-separation;
+      padding-bottom: $container-base-separation;
+    }
+    
+    &.separated-top {
+      padding-top: $container-base-separation;    
+    }
+    
+    &.separated-bottom {
+      padding-bottom: $container-base-separation;
+    }
+}
+
+.separated, .separated-top {
+  padding-top: $container-base-separation;
+  // padding-bottom: $container-base-separation;
+}
+
+.separated-bottom {
+  padding-bottom: $container-base-separation;
+}
+
+.mini-separated {
+  padding-top: $container-base-separation/4;
+  padding-bottom: $container-base-separation/4;
+}
+
+.center-text {
+    text-align: center;
+}
+
+// carousel 
+.carousel-control {
+    &.left, &.right {
+      background-image: none;
+      
+    }
+    
+    &.left {
+        left: -2em;
+    }
+    
+    &.right {
+        right: -2em;
+    }
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+        margin: 0 auto;
+}
+
+.blue {
+    color: $codeando-light !important ; 
+}
+.white {
+    color: white !important;
+}
+
+// specific
+
+@media (min-width: 800px) {
+  .separator {
+    border-left: 1px solid darken($codeando-dark, 5%);
+  }
+}
+
+.thumbnail {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.tick {
+    &:hover {
+        background-color:white;
+        color: $codeando-light;
+    }
+    padding: 10px 15px;
+    margin: 0.6;
+}
+
+.email {
+    width: 19.5em;
+    margin: 0.6em;
+    background-color: transparent;
+    color: white;
+    border-color: 20px solid white !important;
+    border-width: 2px;
+    border-radius: 20px !important;
+    padding: 10px 25px;
+    height: 45px;
+    border-style:solid;
+}
+
+.footer {
+    background-color: #F6F6F6;
+}
+
+.footer-menu {
+    list-style: none;
+    display: inline-block;
+    font-size: 12px;
+    
+    
+    &>li{
+        list-style: none;
+        vertical-align: top;
+        display:inline-block;
+        margin: 10px 1.5px;
+       // margin-right: 1.5px;
+        //margin-top: 10px;
+        
+        .footer-menu-head {
+            font-weight: bold;
+        }
+        
+        ul>li {
+           list-style: none; 
+        }
+    }
+    
+    .gt {
+       img {
+           margin-top: 5px;
+           margin-bottom: 5px;
+       }
+    }
+}
+
+@media(max-width:  700px){
+    .footer {
+        margin: 0 auto;
+        
+        .logo>img {
+            width: 200px;
+            margin-left: 60px;
+        }
+    }
+    
+    .footer-menu {
+        clear: both;
+        width: 100%;
+        float: none;
+        width: 100%;
+        display: block !important;
+        
+        &>li {
+          margin: 10px auto;
+          display: block;
+          
+          ul>li {
+              display: block;
+              text-align: center;
+              margin: 0 auto;
+          }
+          
+          ul>li>img {
+              width: 30px;
+              margin-top: 15px;
+          }
+        }
+    }
+}
